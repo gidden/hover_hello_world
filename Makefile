@@ -21,6 +21,12 @@ build:
 	@echo "Building $(NAME) in ./$(BLDHTMLDIR)"
 	hovercraft $(PRESFILE) $(BLDHTMLDIR)
 
+serve:
+	@echo 
+	@echo "Serving files in $(BLDHTMLDIR)"
+	cd $(BLDHTMLDIR) && \
+	python -m SimpleHTTPServer
+
 publish:
 	@echo
 	@echo "Updating $(DOCHTMLDIR) with current documentation."
